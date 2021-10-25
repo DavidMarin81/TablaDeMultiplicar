@@ -3,6 +3,7 @@ package com.example.tablademultiplicar
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.tablademultiplicar.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -57,6 +58,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.boton10.setOnClickListener{
             startActivity(Intent(this, MainActivity2::class.java).putExtra("numero", "10"))
+        }
+
+        binding.botonJugar.setOnClickListener{
+            Toast.makeText(this, "Opción disponible solo para usuarios registrados", Toast.LENGTH_SHORT).show()
         }
 
     }
